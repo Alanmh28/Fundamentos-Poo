@@ -1,0 +1,50 @@
+
+
+public class Carro {
+private static int numCoche = 0;
+private String marca;
+private int VelActual;
+private String Modelo;
+private int anio;
+public String getMarca() {
+return marca;
+}
+public void setMarca(String marca) {
+this.marca = marca;
+}
+public int getVelActual() {
+return VelActual;
+}
+public void setVelActual(int velActual) {
+VelActual = velActual;
+}
+public String getModelo() {
+return Modelo;
+}
+public void setModelo(String modelo) {
+Modelo = modelo;
+}
+public int getAnio() {
+return anio;
+}
+public void setAnio(int anio) {
+this.anio = anio;
+}
+public Carro() {
+contarCoche();
+}
+public Carro(String marca, String modelo, int anio, int velActual)
+{
+this.marca = marca;
+this.Modelo = modelo;
+this.anio = anio;
+this.VelActual = velActual;
+contarCoche();
+}
+static void contarCoche() {
+numCoche++;
+}
+public static int getNumCoche() {
+return numCoche;
+}
+}
